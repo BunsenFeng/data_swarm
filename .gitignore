@@ -1,3 +1,21 @@
+# repo specific
+
+data/sft/
+data/sft_data.py
+data/eval/test.py
+initial_experts/*
+!initial_experts/expert_init.py
+search/*
+!search/readme.md
+wandb/
+sft.py
+sft.sh
+*.sh
+*.txt
+!data_swarm.sh
+other_checkpoint/
+test.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
