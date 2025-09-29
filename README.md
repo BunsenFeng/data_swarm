@@ -60,5 +60,10 @@ Do `python data_swarm.py -h` to see a list of all possible hyperparameters and s
 If Data Swarms is helpful to you:
 
 ```
-TBD
+@article{feng2025data,
+  title={Data Swarms: Optimizable Generation of Synthetic Evaluation Data},
+  author={Feng, Shangbin and Wang, Yike and Shi, Weijia and Tsvetkov, Yulia},
+  journal={arXiv preprint arXiv:2506.00741},
+  year={2025}
+}
 ```
