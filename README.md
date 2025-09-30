@@ -1,6 +1,6 @@
 # data_swarm
 
-Repository for [Data Swarms: Optimizable Generation of Synthetic Evaluation Data](https://bunsenfeng.github.io/).
+Repository for [Data Swarms: Optimizable Generation of Synthetic Evaluation Data](https://arxiv.org/abs/2506.00741).
 
 ## Quick Start
 
