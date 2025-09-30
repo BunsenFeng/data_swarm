@@ -19,7 +19,7 @@ LONG_TASK_FLAG = False
 
 project_id = "YOUR_GCLOUD_PROJECT_ID"
 if project_id == "YOUR_GCLOUD_PROJECT_ID":
-    print("Please set your Google Cloud project ID in the code. Safely ignore this warning if your evaluation does not involve LLM-as-a-judge.")
+    print("Please set your Google Cloud project ID in the code.")
 else:
     location_list = ["us-east5", "us-south1", "us-central1", "us-west4", "us-east1", "us-east4", "us-west1"]
     location = random.choice(location_list)
@@ -30,7 +30,7 @@ else:
         generationConfig = GenerationConfig(temperature=0, max_output_tokens=200)
     except:
         if not vertex_already_warned:
-            warnings.warn("Ignore this if not running objective 4: human preferences: provide your own project_id for Vertex AI API access. Check out line 49.")
+            warnings.warn("Ignore this if not running objective 4: human preferences: provide your own project_id for Vertex AI API access.")
             vertex_already_warned = True
 
     safety_config = [
@@ -60,7 +60,7 @@ try:
     client = AzureOpenAI(
         api_version="2025-01-01-preview",  
         api_key="YOUR_AZURE_API_KEY",
-        azure_endpoint="https://tsvetshop.openai.azure.com/"
+        azure_endpoint="YOUR_AZURE_API_ENDPOINT"
     )
 except:
     print("Please set your Azure OpenAI API key in the code. Safely ignore this warning if your evaluation does not involve OpenAI models.")
@@ -278,7 +278,7 @@ def gpt_4o_generate(query_list):
         prompt = query
         try:
             response = client.chat.completions.create(
-                model="gpt4o",
+                model="gpt-4o",
                 messages=[
                     {
                         "role": "user",

@@ -25,6 +25,9 @@ def assign_gpu(num_gpus, process_idx, total_processes):
     return gpu_idx
 
 if __name__ == "__main__":
+
+    torch.multiprocessing.set_start_method('spawn')
+
     argParser = argparse.ArgumentParser()
     argParser.add_argument("-n", "--name", help="name of this data swarms search, also directory name in search/")
     argParser.add_argument("-t", "--task", help="name of the task/dataset") # alpaca, gsm8k, truthfulqa, wikidyk
@@ -86,7 +89,6 @@ if __name__ == "__main__":
 
     run = wandb.init(name=search_pass_name, project=project_name_wb)
     run.config.update(args)
-    torch.multiprocessing.set_start_method('spawn')
     logging.basicConfig(filename=os.path.join("search", search_pass_name, "log.txt"), level=logging.DEBUG)
 
     test_generator_paths = []

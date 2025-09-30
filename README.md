@@ -20,7 +20,7 @@ huggingface-cli login
 Download initial experts.
 ```
 cd initial_experts
-python initial_experts.py
+python expert_init.py
 cd ..
 ```
 
